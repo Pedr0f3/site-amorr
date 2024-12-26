@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEITO COM AMOR PARA MEU AMOR</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            background-image: url('https://i.pinimg.com/originals/7b/16/a2/7b16a29aad3bf742ecde5f581c352a35.gif');
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .painel {
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.85);
+            width: 300px;
+            height: auto;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e84118;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ❤️ FEITO PARA MEU AMOR ❤️  
+    </header>
+    <section>
+        <div class="painel">
+            <form onsubmit="return validar()">
+                <input type="text" id="login" placeholder="Digite seu login">
+                <input type="password" id="senha" placeholder="Digite sua senha">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function validar() {
+            const login = document.getElementById('login').value;
+            const senha = document.getElementById('senha').value;
+
+            if (senha === '307' && login.toLowerCase() === 'pedro') {
+                window.location.href = 'surpresa.html';
+                return false; // Evita o envio do formulário.
+            } else {
+                alert('Senha ou login errados!');
+                return false; // Evita o envio do formulário.
+            }
+        }
+    </script>
+</body>
+</html>

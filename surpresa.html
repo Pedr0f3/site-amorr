@@ -32,14 +32,21 @@
         }
 
         #titulo {
+            font-family: 'Poppins';
             color: white;
             margin-top: 50px;
+            padding: 15px;
+            margin: 15px;
+            background-color: #000000;
+            border-radius: 20px;
+            border: 1px solid wheat;
+            font-size: 18px;
         }
 
         #container-fotos{
             width: 300px;
             margin: auto;
-            margin-bottom: 20px;
+            margin-top: 40px;
             background-color: white;
             text-align: center;
             padding: 20px;
@@ -59,6 +66,26 @@
             width: 300px;
             border-radius: 10px;
             border: 1px solid black;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        #container-fotos p {
+            font-family: 'Poppins';
+            font-weight: 500;
+        }
+
+        #cronometro {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid wheat;
+            margin: 10px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -68,41 +95,83 @@
     </header>
 
     <section>
-        <div><h1 id="titulo">Eu te amo minha vida, você é a pessoa mais especial do meu coração amareloooo....</h1></div>
+        <div><h1 id="titulo">Parabéns por ter chego até aqui! Saiba que eu te admiro muito e sou seu eterno fã, espero que tenha gostado da brincadeira! </h1></div>
         <div>
             <div id="container-fotos" class="d">
                 <img src="fotos/foto1.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>❤️ Minha felicidade é ter o seu nome gravado em meu coração. ❤️</p>
             </div>
             <div id="container-fotos" class="e">
                 <img src="fotos/foto2.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>Amar você é fácil, porque você é simplesmente perfeita para mim em todos os sentidos.</p>
             </div>
             <div id="container-fotos" class="d">
                 <img src="fotos/foto3.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>Você é minha fonte de inspiração. Com você, encontro a coragem para romper cada desafio que o mundo nos apresenta. Em teus olhos encontro a motivação para seguir rumo aos nossos sonhos!</p>
             </div>
             <div id="container-fotos" class="e">
                 <img src="fotos/foto4.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p> Basta admirar você para entender que não é apenas um sorriso, não é apenas um olhar, seu cheiro, seu jeito de ser e a maneira de sonhar, seu encanto, a maneira de pensar, as manias ao falar e agir, basta admirar para entender que a minha felicidade é com você!</p>
             </div>
             <div id="container-fotos" class="d">
                 <img src="fotos/foto5.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>Penso em você quase toda hora. Só não penso toda hora porque quando estou com você não penso em mais nada.</p>
             </div>
             <div id="container-fotos" class="e">
                 <img src="fotos/foto6.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>Quando eu penso em você, perco a calma e se vai minha paz. Quando relembro nossos lindos momentos, teu sorriso acalma meu coração e eu me apaixono mais e mais.</p>
             </div>
             <div id="container-fotos" class="d">
                 <img src="fotos/foto7.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>O brilho dos seus olhos me fascina, com seu jeitinho de menina, me faz lhe admirar. Seu lábio com sabor de mel me lava até o céu, e no espaço flutuar!</p>
             </div>
             <div id="container-fotos" class="e">
                 <img src="fotos/foto8.jpg" alt="">
-                <p>Minha felicidade é ter o seu nome gravado em meu coração.</p>
+                <p>És tu minha princesa 👸
+                    És tu minha lindeza 😍
+                    Sempre te amarei ❤️
+                    Até que o mundo desapareça 🌎</p>
             </div>
         </div>
+
+        <div id="cronometro"></div>
+
+        <h1 id="titulo">Achou que era só isso? Você se enganou!!!!! Volte na página anterior e use o Login 'canal', a senha é o numero de inscritos que nós temos!</h1>
     </section>
+
+    <script>
+        function calcularTempo() {
+            // Data de início do relacionamento
+            const inicio = new Date('2022-12-05T20:30:00'); // Substitua pela data correta
+            const agora = new Date();
+
+            // Cálculo da diferença em milissegundos
+            const diff = agora - inicio;
+
+            // Conversões contínuas
+            const segundosTotais = Math.floor(diff / 1000);
+            const minutosTotais = Math.floor(segundosTotais / 60);
+            const horasTotais = Math.floor(minutosTotais / 60);
+            const diasTotais = Math.floor(horasTotais / 24);
+            const anos = Math.floor(diasTotais / 365);
+            const diasRestantes = diasTotais % 365;
+            const meses = Math.floor(diasRestantes / 30);
+            const dias = diasRestantes % 30;
+            const horas = horasTotais % 24;
+            const minutos = minutosTotais % 60;
+            const segundos = segundosTotais % 60;
+
+            // Atualização do cronômetro
+            const cronometro = document.getElementById('cronometro');
+            cronometro.innerHTML = `
+                Estamos juntos há:<br>
+                ${anos} anos, ${meses} meses, ${dias} dias, 
+                ${horas} horas, ${minutos} minutos e ${segundos} segundos.
+            `;
+        }
+
+        // Atualização a cada segundo
+        setInterval(calcularTempo, 1000);
+    </script>
 </body>
 </html>
