@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEITO COM AMOR PARA MEU AMOR</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        body {
+            background-image: url(https://i.pinimg.com/originals/7b/16/a2/7b16a29aad3bf742ecde5f581c352a35.gif);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: auto;
+        }
+
+        header {
+            background: #000000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.5);
+            color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Poppins';
+            font-weight: 700;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.775);
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 350px;
+            height: 550px;
+            border-radius: 25px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .painel h1{
+            font-family: 'Poppins';
+            font-weight: 800;
+        }
+
+        .painel h3{
+            font-family: 'Poppins';
+            font-weight: 500;
+            width: 250px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        #sim {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 1px solid white;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #nao {
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 1px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+        }
+
+        #dono-img {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #img {
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ❤️ FEITO PARA MEU AMOR ❤️  
+    </header>
+    <section>
+        <div class="painel">
+            <h1>VOCÊ É O AMOR PRA MINHA VIDA!</h1>
+
+            <div id="dono-img">
+                <img src="https://i.pinimg.com/originals/c4/ff/31/c4ff310ed4399ebe2c85ffc52ad5eeab.gif" alt="" id="img">
+            </div>
+
+            <h3>Você está pronta para a surpresa??</h3>
+
+            <button onmouseover="fuja()"  id="sim" > SIM </button>
+            <a href="surpresa.html"><button id="nao"> NÃO </button></a>
+
+        </div>
+
+
+    </section>
+
+    <script>
+        function fuja() {
+            var botao = document.getElementById('sim');
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maaxX = larguraJanela - botao.offsetWidth;
+            var maaxY = alturaJanela - botao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maaxX);
+            var aleatorioY = Math.floor(Math.random() * maaxY);
+
+            botao.style.left = aleatorioX + "px";
+            botao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
