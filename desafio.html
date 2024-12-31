@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEITO COM AMOR PARA MEU AMOR</title>
     <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
         body {
-            background-image: url(https://i.pinimg.com/originals/7b/16/a2/7b16a29aad3bf742ecde5f581c352a35.gif);
+            background-image: url('https://i.pinimg.com/originals/7b/16/a2/7b16a29aad3bf742ecde5f581c352a35.gif');
             background-repeat: no-repeat;
             background-position: top;
             background-attachment: fixed;
@@ -25,17 +23,16 @@
             width: 100%;
             box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.5);
             color: white;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding: 20px;
             font-size: 25px;
             text-align: center;
-            font-family: 'Poppins';
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
         }
 
-        .painel{
+        .painel {
             margin: auto;
-            background-color: rgba(255, 255, 255, 0.775);
+            background-color: rgba(255, 255, 255, 0.9);
             margin-top: 50px;
             margin-bottom: 50px;
             width: 320px;
@@ -45,13 +42,13 @@
             padding: 10px;
         }
 
-        .painel h1{
-            font-family: 'Poppins';
+        .painel h1 {
+            font-family: 'Poppins', sans-serif;
             font-weight: 800;
         }
 
-        .painel h3{
-            font-family: 'Poppins';
+        .painel h3 {
+            font-family: 'Poppins', sans-serif;
             font-weight: 500;
             width: 250px;
             margin: auto;
@@ -66,6 +63,7 @@
             border: 1px solid white;
             border-radius: 10px;
             color: white;
+            cursor: pointer;
         }
 
         #nao {
@@ -76,6 +74,7 @@
             border-radius: 10px;
             color: white;
             margin-left: 70px;
+            cursor: pointer;
         }
 
         #nao a {
@@ -110,34 +109,43 @@
                 <img src="https://i.pinimg.com/originals/c4/ff/31/c4ff310ed4399ebe2c85ffc52ad5eeab.gif" alt="" id="img">
             </div>
 
-            <h3>Você está pronta para a surpresa??</h3>
+            <h3 id="surp">Você está pronta para a surpresa??</h3>
 
-            <button onmouseover="fuja()"  id="sim" > SIM </button>
-            <button id="nao"><a href="login.html">  Não </a></button>
-
+            <button onclick="contaClique()" onmouseover="fuja()" id="sim">SIM</button>
+            <button id="nao"><a href="login.html">Não</a></button>
         </div>
-
-
     </section>
 
     <script>
+        let contador = 0;
+
         function fuja() {
             var botao = document.getElementById('sim');
 
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
 
-            var maaxX = larguraJanela - botao.offsetWidth;
-            var maaxY = alturaJanela - botao.offsetHeight;
+            var maxX = larguraJanela - botao.offsetWidth;
+            var maxY = alturaJanela - botao.offsetHeight;
 
-            var aleatorioX = Math.floor(Math.random() * maaxX);
-            var aleatorioY = Math.floor(Math.random() * maaxY);
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
 
+            botao.style.position = 'absolute';
             botao.style.left = aleatorioX + "px";
             botao.style.top = aleatorioY + "px";
         }
 
-
+        function contaClique() {
+            contador++;
+            if (contador >= 307) {
+                alert("Você conseguiu clicar 100 vezes! Agora vamos para a surpresa! ❤️");
+                window.location.href = "login.html"; // Substitua "surpresa.html" pelo link da próxima página
+            } else {
+                var mens = document.getElementById('surp');
+                mens.innerHTML= `Você clicou ${contador} vezes! Continue tentando! 😅`;
+            }
+        }
     </script>
 </body>
 </html>

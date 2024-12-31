@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
         body {
-            background-image: url('https://i.pinimg.com/originals/7b/16/a2/7b16a29aad3bf742ecde5f581c352a35.gif');
+            background-image: url('https://i.pinimg.com/736x/92/9b/9d/929b9d9423e84d4e07edf17fd94d5c44.jpg');
             background-repeat: no-repeat;
             background-position: top;
             background-attachment: fixed;
@@ -71,8 +71,8 @@
     <section>
         <div class="painel">
             <form onsubmit="return validar()">
-                <input type="text" id="login" placeholder="Digite seu login">
-                <input type="password" id="senha" placeholder="Digite sua senha">
+                <input type="text" id="login" placeholder="Nome do seu amor">
+                <input type="password" id="senha" placeholder="Número de vezes que você clicou">
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -85,6 +85,9 @@
 
             if (senha === '307' && login.toLowerCase() === 'pedro') {
                 window.location.href = 'surpresa.html';
+                return false; // Evita o envio do formulário.
+            } else if (login.toLowerCase() === 'canal') {
+                window.location.href = 'surpresa-inscritos.html';
                 return false; // Evita o envio do formulário.
             } else {
                 alert('Senha ou login errados!');

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURPRESAA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            background-image: url(https://i.pinimg.com/736x/ac/e5/81/ace5814dc826ff90910b006d233d777c.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: auto;
+        }
+
+        header {
+            background: #ffffff;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.5);
+            color: rgb(0, 0, 0);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Poppins';
+            font-weight: 700;
+            border-bottom: 1px solid rgb(0, 0, 0);
+        }
+
+        #titulo {
+            font-family: 'Poppins';
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            background-color: #ffebeb;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        #container-fotos{
+            margin: auto;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid black;
+        }
+
+        #autor {
+            font-family: 'Poppins';
+            font-weight: 400;
+            background-color: #fbe9ff;
+            border: 1px solid rgba(0, 0, 0, 0.671);
+            margin-top: 0;
+            border-radius: 20px;
+        }
+
+        #audio {
+            margin: 20px;
+        }
+
+        #container-fotos img {
+            width: 350px;
+            border-radius: 10px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 5px black;
+        }
+
+        #container-fotos p {
+            font-family: 'Poppins';
+            font-weight: 500;
+        }
+
+        #cronometro {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid wheat;
+            margin: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ❤️ FEITO PELOS SEUS FÃS ❤️  
+    </header>
+
+    <section>
+        <div><h1 id="titulo">Boa noiteee, aqui você encontrará um recadinhos feito pelos seus fãs... pelo público do canal que vc tanto ama, por essa comunidade increvelmente foda que vc construiu ao longo desses quase 5 anos de muita luta e dedicação! Somos seus fãs não apenas porque gostamos de brawl ou de roblox, mas sim pq amamos o seu jeito de fazer toda call, todo vídeo, toda live ser especial de um jeitinho que só vc sabe fazer!</h1></div>
+        <div>
+            <div id="container-fotos" class="d">
+                <h1 id="autor">- Gerson -</h1>
+                <img src="fan-arts/gerson.webp" alt="">
+                <audio src="audios/gerson.mp3" controls id="audio"></audio>
+            </div>
+            <div id="container-fotos" class="e">
+                <img src="fotos/foto2.jpg" alt="">
+                <p>Amar você é fácil, porque você é simplesmente perfeita para mim em todos os sentidos.</p>
+            </div>
+            <div id="container-fotos" class="d">
+                <img src="fotos/foto3.jpg" alt="">
+                <p>Você é minha fonte de inspiração. Com você, encontro a coragem para romper cada desafio que o mundo nos apresenta. Em teus olhos encontro a motivação para seguir rumo aos nossos sonhos!</p>
+            </div>
+            <div id="container-fotos" class="e">
+                <img src="fotos/foto4.jpg" alt="">
+                <p> Basta admirar você para entender que não é apenas um sorriso, não é apenas um olhar, seu cheiro, seu jeito de ser e a maneira de sonhar, seu encanto, a maneira de pensar, as manias ao falar e agir, basta admirar para entender que a minha felicidade é com você!</p>
+            </div>
+            <div id="container-fotos" class="d">
+                <img src="fotos/foto5.jpg" alt="">
+                <p>Penso em você quase toda hora. Só não penso toda hora porque quando estou com você não penso em mais nada.</p>
+            </div>
+            <div id="container-fotos" class="e">
+                <img src="fotos/foto6.jpg" alt="">
+                <p>Quando eu penso em você, perco a calma e se vai minha paz. Quando relembro nossos lindos momentos, teu sorriso acalma meu coração e eu me apaixono mais e mais.</p>
+            </div>
+            <div id="container-fotos" class="d">
+                <img src="fotos/foto7.jpg" alt="">
+                <p>O brilho dos seus olhos me fascina, com seu jeitinho de menina, me faz lhe admirar. Seu lábio com sabor de mel me lava até o céu, e no espaço flutuar!</p>
+            </div>
+            <div id="container-fotos" class="e">
+                <img src="fotos/foto8.jpg" alt="">
+                <p>És tu minha princesa 👸
+                    És tu minha lindeza 😍
+                    Sempre te amarei ❤️
+                    Até que o mundo desapareça 🌎</p>
+            </div>
+        </div>
+
+        <div id="cronometro"></div>
+
+    </section>
+
+    <script>
+        function calcularTempo() {
+            // Data de início do relacionamento
+            const inicio = new Date('2020-04-05T08:30:00'); // Substitua pela data correta
+            const agora = new Date();
+
+            // Cálculo da diferença em milissegundos
+            const diff = agora - inicio;
+
+            // Conversões contínuas
+            const segundosTotais = Math.floor(diff / 1000);
+            const minutosTotais = Math.floor(segundosTotais / 60);
+            const horasTotais = Math.floor(minutosTotais / 60);
+            const diasTotais = Math.floor(horasTotais / 24);
+            const anos = Math.floor(diasTotais / 365);
+            const diasRestantes = diasTotais % 365;
+            const meses = Math.floor(diasRestantes / 30);
+            const dias = diasRestantes % 30;
+            const horas = horasTotais % 24;
+            const minutos = minutosTotais % 60;
+            const segundos = segundosTotais % 60;
+
+            // Atualização do cronômetro
+            const cronometro = document.getElementById('cronometro');
+            cronometro.innerHTML = `
+                Somos seus fãs há:<br>
+                ${anos} anos, ${meses} meses, ${dias} dias, 
+                ${horas} horas, ${minutos} minutos e ${segundos} segundos.
+            `;
+        }
+
+        // Atualização a cada segundo
+        setInterval(calcularTempo, 1000);
+    </script>
+</body>
+</html>
